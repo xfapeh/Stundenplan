@@ -1,0 +1,1 @@
+cat Lehrer1.CSV | awk '/Lehrer/' | awk '{print NR, $0}'

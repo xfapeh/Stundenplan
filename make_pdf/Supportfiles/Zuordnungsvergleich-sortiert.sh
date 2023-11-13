@@ -1,0 +1,4 @@
+ 
+cat /home/Achim/Documents/Work/Schule/Stundenplan/16-17/16-17_SPM/Stdp2016-09-21/Zuordnungsvergleich.spm | awk '{if ($4 ~ /[MDDF][oir][0-9]/) {Tag1=$4;}; if ($5 ~ /[MDDF][oir][0-9]/) {Tag1=$5;}; if ($7 ~ /[MDDF][oir][0-9]/) {Tag2=$7;}; if ($8 ~ /[MDDF][oir][0-9]/) {Tag2=$8;}; if (Tag1 ~ Tag2) {} else {print $0};}' | iconv -f iso8859-1 -t utf8 > /home/Achim/Documents/Work/Schule/Stundenplan/16-17/16-17_SPM/Stdp2016-09-21/Zuordnungsvergleich-changes.spm
+
+cat /home/Achim/Documents/Work/Schule/Stundenplan/16-17/16-17_SPM/Stdp2016-09-21/Zuordnungsvergleich.spm | awk '{if ($4 ~ /[MDDF][oir][0-9]/) {Tag1=$4;}; if ($5 ~ /[MDDF][oir][0-9]/) {Tag1=$5;}; if ($7 ~ /[MDDF][oir][0-9]/) {Tag2=$7;}; if ($8 ~ /[MDDF][oir][0-9]/) {Tag2=$8;}; if (Tag1 ~ Tag2) {print $0} else { };}' | iconv -f iso8859-1 -t utf8 > /home/Achim/Documents/Work/Schule/Stundenplan/16-17/16-17_SPM/Stdp2016-09-21/Zuordnungsvergleich-changes-room.spm

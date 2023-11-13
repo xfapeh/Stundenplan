@@ -1,0 +1,1 @@
+awk '/Overfull/ {getline; print $2}' log | sort | uniq -d | tr -d '|' | sed 's/$/\\\\/g' > /home/Achim/Documents/Work/Schule/Stundenplan/XYZ/make_pdf/too-long.tex
